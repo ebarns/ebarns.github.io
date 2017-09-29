@@ -11,6 +11,13 @@
 }
 .click-me div {
     padding: 1rem;
+    text-align: center;
+}
+.click-me div:hover{
+    color:white;
+    cursor: pointer;
+    -webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
 }
 .push{
     font-size: 4rem;
@@ -33,6 +40,7 @@
     background-color: #c82333;
     max-height: 20rem;
     overflow-y: auto;
+    text-shadow: 2px 2px white;
 }
 
 .the-end{
@@ -78,6 +86,7 @@
 
 .explode-gif{
     width: 30%;
+    margin:auto;
 }
 
 .gif{
