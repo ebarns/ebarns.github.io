@@ -33,35 +33,57 @@ function exploding(count) {
 var showText = function (target, message, index, interval) {
     if (index < message.length) {
         $(target).append(message[index++]);
-        setTimeout(function () { showText(target, message, index, interval); }, interval);
+        setTimeout(function () {
+            showText(target, message, index, interval);
+        }, interval);
+        // $('<i class="em em-tired-face"></i>').appendTo(target);
+    }
+}
+
+var showTextPerLine = function (target, message, index, interval) {
+    if (index < message.length) {
+        $(target).append(message[index++] + "<br/>");
+        setTimeout(function () {
+            showTextPerLine(target, message, index, interval);
+        }, interval);
+        // Getting the height of the document
+        var n = $(document).height();
+        $('html, body').animate({ scrollTop: n }, 45);
         // $('<i class="em em-tired-face"></i>').appendTo(target);
     }
 }
 
 
 $(".trying").hover(
-function(){
-    $('<span class="col-md-4"> I hate crying but sometimes <br/> i just cant help it. Whats so wrong about crying? I would control it if i could. I would be cold if i could. but i cant. i cry. i cry. </span>').appendTo('.cry2');
-});
+    function () {
+        $('<span class="col-md-4"> I hate crying but sometimes <br/> i just cant help it. Whats so wrong about crying? I would control it if i could. I would be cold if i could. but i cant. i cry. i cry. </span>').appendTo('.cry2');
+    });
 
-function trying(){
+function trying() {
     showText(".trying", "we watch each other online and judge. We used to not know what was happening in their heads but now we dont know what happens beyond their screen", 0, 300);
     showText(".trying", "we watch each other online and judge. We used to not know what was happening in their heads but now we dont know what happens beyond their screen", 0, 300);
 };
 
-function addImageToCanvas(imagePath, posX, posY){
+function addImageToCanvas(imagePath, posX, posY) {
     // var canvas = document.getElementById('#canvas');
     var context = canvas.getContext('2d');
     var img = new Image();
     img.src = imagePath;
-    context.drawImage(img, posX,posY);
+    context.drawImage(img, posX, posY);
 
 }
 
-function showSection(tag){
+function textRace() {
+    showTextPerLine(".text-race", "LOSER | LOSER | LOSER", 0, 200);
+
+}
+
+function showSection(tag) {
     $(tag).fadeIn(2000);
 }
-function main(){
+
+
+function main() {
     $('.click-me').hide();
     $('.section2').hide();
     $('.click-me').fadeIn(1000);
