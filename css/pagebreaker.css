@@ -6,7 +6,6 @@
     margin-top:5rem;
     font-family: 'Cutive Mono', monospace;
     font-size:3rem;
-    max-height: 40rem;
     overflow: auto;
 }
 .click-me div {
@@ -26,13 +25,19 @@
     font-size: 4.2rem;
 }
 .tap1{
-    max-height: 15rem;
+    font-size:3rem;
     text-decoration: line-through;
     color: white;
 }
 .tap2{
+    font-size: 3rem;
+    font-family: 'Cutive Mono', monospace;
     color: red;
     text-shadow: 10px 10px white;
+}
+
+.tap-box {
+    text-align: center;
 }
 .trying{
     font-size: 3rem;
@@ -89,7 +94,7 @@
 }
 
 .explode-gif{
-    width: 30%;
+    width: 10%;
     margin:auto;
 }
 
@@ -139,6 +144,10 @@
 .slot-colums{
     padding-bottom: 5rem;
     margin-bottom: 10rem;
+}
+
+.gentle-gif{
+    width: 80%;
 }
 canvas{
      position:absolute;
