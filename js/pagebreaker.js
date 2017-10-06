@@ -85,12 +85,12 @@ var showWordPerLine = function (target, message, index, interval) {
     }
 }
 
-$('.section2').on('mouseenter', function() {
-    this.iid = setInterval(function() {
+$('.section2').on('mouseenter', function () {
+    this.iid = setInterval(function () {
         // do something
         scrollDownSection('.trying', 1000);
     }, 25);
-}).on('mouseleave', function(){
+}).on('mouseleave', function () {
     this.iid && clearInterval(this.iid);
 });
 
@@ -118,10 +118,46 @@ function addImageToCanvas(imagePath, posX, posY) {
 
 }
 
-function textRace() {
-    showTextPerLine(".text-race", "LOSER | LOSER | LOSER", 0, 200);
+var bodyElement = document.querySelector("body");
 
+var requestAnimationFrame = window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame;
+
+var delay = 0;
+
+function textRace() {
+    var message = 'LOSER | LOSER | LOSER';
+    var interval_counter = 0;
+    var interval_time = 200;
+    showTextPerLine(".text-race", message, 0, interval_time);
+    interval = window.setInterval(function () {
+        changeColor()
+        interval_counter += interval_time;
+        if(interval_counter === interval_time * message.length) {
+            clearInterval(interval);
+            // $(".myBody").css('backgroundColor', '#fff');
+        }
+    }, 200);
 }
+
+var color_shift = 0;
+function changeColor() {
+    var doc = $(".myBody");
+    // var slots = $(".text-race");
+    var color = ["#fff",'#C21F39'];
+    var slotColors = ['#ff1a1a', '#ff0000','#e60000','#cc0000','#b30000','#990000'];
+    // $(".myBody").css('backgroundColor', color[(color_shift + 1)  % 2]);
+    $( ".text-race" ).each(function( i ) {
+        this.style.backgroundColor = slotColors[i + color_shift % slotColors.length];
+    });
+    // for(var j=0; j< slots.length; j+= 1){
+    //     slots[j].css('backgroundColor',slotColors[j]);
+    // }
+    color_shift += 1;
+}
+
 
 function showSection(tag) {
     $(tag).fadeIn(2000);
@@ -133,9 +169,9 @@ function showSectionTime(tag, fadeTime) {
 
 
 function main() {
-    $('.click-me').hide();
-    $('.section2').hide();
-    $('.section3').hide();
+    // $('.click-me').hide();
+    // $('.section2').hide();
+    // $('.section3').hide();
     $('.click-me').fadeIn(1000);
 }
 

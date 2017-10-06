@@ -50,7 +50,7 @@
 }
 
 .the-end{
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -119,11 +119,13 @@
     font-family: 'Cutive Mono', monospace;
 }
 
-.text-race{
+.text-race {
     font-size: 8rem;
-    color:white;
-    position:absolute;
+    color: white;
+    position: absolute;
     overflow-y: auto;
+    border-radius: 10rem;
+    text-align: center;
 }
 
 .slots{
