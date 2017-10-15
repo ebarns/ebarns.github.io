@@ -151,6 +151,17 @@
 .gentle-gif{
     width: 80%;
 }
+
+.wrestle-gif{
+    width:100%;
+}
+
+.future{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 4rem;
+    color:white;
+}
 canvas{
      position:absolute;
+
  }
