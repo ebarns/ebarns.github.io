@@ -21,6 +21,18 @@
             top: 0px; width: 100%;
             padding: 5px;
             z-index:100;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+
+        .main-link{
+            text-decoration: none;
+            color: white;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .main-link:hover{
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -62,10 +74,11 @@
     function init( font ) {
         camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
         camera.position.z = 400;
+        camera.position.y = 0;
         scene = new THREE.Scene();
         scene.background = new THREE.Color( 0x050505 );
         uniforms = {
-            amplitude: { value: 5.0 },
+            amplitude: { value: 1.0 },
             opacity:   { value: 0.8 },
             color:     { value: new THREE.Color( 0xff0000 ) }
         };
@@ -77,16 +90,16 @@
             depthTest:      false,
             transparent:    true
         });
-        var geometry = new THREE.TextGeometry( 'milia rage', {
+        var geometry = new THREE.TextGeometry( 'antonio cardoso', {
             font: font,
-            size: 50,
+            size: 20,
             height: 15,
             curveSegments: 10,
-            bevelThickness: 5,
+            bevelThickness: 1,
             bevelSize: 1.5,
             bevelEnabled: true,
             bevelSegments: 10,
-            steps: 40
+            steps: 20
         } );
         geometry.center();
         var vertices = geometry.vertices;
@@ -125,21 +138,24 @@
     }
     function render() {
         var time = Date.now() * 0.001;
-        object.rotation.y = 0.25 * time;
+//        object.rotation.y = 0.25 * time;
         uniforms.amplitude.value = Math.sin( 0.5 * time );
         uniforms.color.value.offsetHSL( 0.0005, 0, 0 );
         var attributes = object.geometry.attributes;
         var array = attributes.displacement.array;
         for ( var i = 0, l = array.length; i < l; i += 3 ) {
-            array[ i     ] += 0.3 * ( 0.5 - Math.random() );
-            array[ i + 1 ] += 0.3 * ( 0.5 - Math.random() );
-            array[ i + 2 ] += 0.3 * ( 0.5 - Math.random() );
+            array[ i     ] = 0.3 * ( 0.5 - Math.random() );
+            array[ i + 1 ] = 0.3 * ( 0.5 - Math.random() );
+            array[ i + 2 ] = 0.3 * ( 0.5 - Math.random() );
         }
         attributes.displacement.needsUpdate = true;
         renderer.render( scene, camera );
     }
 </script>
 
+<div id="info">
+    <a class="main-link" href="antonsite/index.html">ENTER</a>
+</div>
 </body>
 
 </html>
