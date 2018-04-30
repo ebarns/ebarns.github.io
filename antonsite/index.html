@@ -15,8 +15,8 @@
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container top-bar">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
@@ -25,12 +25,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Antonio Cardoso</a>
+            <a onclick="scrollSection('.top-bar', 2000)" class="navbar-brand" >Antonio Cardoso</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <div class="navbar-form navbar-right" role="form">
+            <div class="navbar-right nav-item">
+                <a href="#work">
+                    <div class="nav-link">
+                        Work
+                    </div>
+                </a>
                 <a href="#contact">
-                    <div class="form-group">
+                    <div class="nav-link">
+                        About
+                    </div>
+                </a>
+                <a href="#contact">
+                    <div class="nav-link">
                         Contact
                     </div>
                 </a>
@@ -47,10 +57,13 @@
 <!--</div>-->
 
 <div class="container">
+    <div id="about" class="row">
+
+    </div>
     <!-- Example row of columns -->
-    <div class="row">
+    <div id="work" class="row">
         <div class="col-md-12">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Islands%20%231.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" src="img/load.gif" data-src="img/Cardoso_Antonio_Islands%20%231.jpg"/>
         </div>
         <div class="col-md-12">
             <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Islands%20%232.jpg" src="img/load.gif"/>
@@ -70,22 +83,22 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/08.%20Cardoso_Antonio_Soap%20Friends%20(View%202).jpg"
+            <img class="img-responsive lazy" data-src="img/08.%20Cardoso_Antonio_Soap%20Friends%20(View%202)-min.jpg"
                  src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_A%20Hot%20Day.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_A%20Hot%20Day-min.jpg" src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Ano%20Novo.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Ano%20Novo-min.jpg" src="img/load.gif"/>
         </div>
     </div>
     <div class="row tall-images">
         <div class="col-md-6">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_4th%20of%20July.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_4th%20of%20July-min.jpg" src="img/load.gif"/>
         </div>
         <div class="col-md-6">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Carnaval.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Carnaval-min.jpg" src="img/load.gif"/>
         </div>
     </div>
     <div class="row">
@@ -104,19 +117,22 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Bubble%20Bath.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Bubble%20Bath-min.jpg" src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Boozy%20Blueprint.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Boozy%20Blueprint-min.jpg"
+                 src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Bored%20Teen%20(i).jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Bored%20Teen%20(i)-min.jpg"
+                 src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Celebração%20Sólo.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Celebração%20Sólo-min.jpg"
+                 src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Chinese%20New%20Year.jpg"
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Chinese%20New%20Year-min.jpg"
                  src="img/load.gif"/>
         </div>
         <div class="col-md-4">
@@ -134,30 +150,32 @@
                  src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Trespassers%20Only!.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Trespassers%20Only!.jpg"
+                 src="img/load.gif"/>
         </div>
         <div class="col-md-4">
             <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_Untitled.jpg" src="img/load.gif"/>
         </div>
         <div class="col-md-4">
-            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_what%20what%20WHAT.jpg" src="img/load.gif"/>
+            <img class="img-responsive lazy" data-src="img/Cardoso_Antonio_what%20what%20WHAT.jpg"
+                 src="img/load.gif"/>
         </div>
 
     </div>
 
     <hr>
 
-    <footer id="contact">
-        <div>
+    <footer>
+        <div id="contact" class="contact-container">
             <div>Antonio Cardoso</div>
             <div>Boston, MA</div>
             <div>antoniocardoso2013@gmail.com</div>
         </div>
     </footer>
 </div> <!-- /container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 
 <script src="js/main.js"></script>
@@ -229,7 +247,7 @@
                 for (var i = 0; i < lazyImages.length; i++) {
                     if (elementInViewport(lazyImages[i])) {
                         loadImage(lazyImages[i], function () {
-                            lazyImages.splice(i, i);
+                            lazyImages.splice(i, 1);
                         });
                     }
                 }
@@ -241,7 +259,7 @@
         }
         processScroll();
         addEventListener('scroll', processScroll);
-    }
+    };
 
 </script>
 </body>
