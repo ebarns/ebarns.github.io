@@ -73,7 +73,7 @@
     } );
     function init( font ) {
         camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
-        camera.position.z = 400;
+        camera.position.z = 500;
         camera.position.y = 0;
         scene = new THREE.Scene();
         scene.background = new THREE.Color( 0x050505 );
@@ -90,15 +90,15 @@
             depthTest:      false,
             transparent:    true
         });
-        var geometry = new THREE.TextGeometry( 'Hey Maria \n Free this Weekend?', {
+        var geometry = new THREE.TextGeometry( 'maria \n are you free \n this weekend ?', {
             font: font,
-            size: 20,
+            size: 22,
             height: 15,
             curveSegments: 10,
             bevelThickness: 1,
             bevelSize: 1,
             bevelEnabled: true,
-            bevelSegments: 10,
+            bevelSegments: 6,
             steps: 20
         } );
         geometry.center();
@@ -144,9 +144,9 @@
         var attributes = object.geometry.attributes;
         var array = attributes.displacement.array;
         for ( var i = 0, l = array.length; i < l; i += 3 ) {
-            array[ i     ] = 0.3 * ( 0.5 - Math.random() );
-            array[ i + 1 ] = 0.3 * ( 0.5 - Math.random() );
-            array[ i + 2 ] = 0.3 * ( 0.5 - Math.random() );
+            array[ i     ] = 0.3 * ( 0.3 - Math.random() );
+            array[ i + 1 ] = 0.3 * ( 0.3 - Math.random() );
+            array[ i + 2 ] = 0.3 * ( 0.3 - Math.random() );
         }
         attributes.displacement.needsUpdate = true;
         renderer.render( scene, camera );
